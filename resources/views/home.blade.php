@@ -29,7 +29,7 @@
                 <li><a href="#home" class="nav-link text-gray-600 hover:text-blue-600">Home</a></li>
                 <li><a href="#about" class="nav-link text-gray-600 hover:text-blue-600">About</a></li>
                 <li><a href="#slider" class="nav-link text-gray-600 hover:text-blue-600">Destination</a></li>
-                <li><a href="#contact" class="nav-link text-gray-600 hover:text-blue-600">Contact</a></li>
+                <li><a href="#footer" class="nav-link text-gray-600 hover:text-blue-600">Contact</a></li>
                 <li><a href="{{ url('/login') }}"
                         class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700">Login</a></li>
             </ul>
@@ -174,7 +174,7 @@
 
 
     <!-- Footer Section -->
-    <footer class="text-white py-12 mt-16 relative"
+    <footer id="footer" class="text-white py-12 mt-16 relative"
         style="background-image: url('{{ asset('images/bg-2.jpg') }}'); background-attachment: fixed; background-position: center;">
         <!-- Overlay Gelap -->
         <div class="absolute inset-0 bg-black opacity-50"></div>
