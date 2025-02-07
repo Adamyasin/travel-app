@@ -7,19 +7,16 @@ use Illuminate\Support\Facades\Schema;
 return new class extends Migration {
     public function up(): void
     {
-        Schema::create('jadwal_travel', function (Blueprint $table) {
+        Schema::create('laporan_pemesanan_travel', function (Blueprint $table) {
             $table->id();
-            $table->string('tujuan');
-            $table->date('tanggal_berangkat');
-            $table->time('waktu_berangkat');
-            $table->integer('kuota');
-            $table->decimal('harga_tiket', 10, 2);
+            $table->foreignId('jadwal_id')->constrained('jadwal_travel')->onDelete('cascade');
+            $table->integer('total_penumpang');
             $table->timestamps();
         });
     }
 
     public function down(): void
     {
-        Schema::dropIfExists('jadwal_travel');
+        Schema::dropIfExists('laporan_pemesanan_travel');
     }
 };

@@ -8,8 +8,8 @@
                     class="block w-full text-left p-2 rounded bg-blue-100">Jadwal Travel</a>
             </li>
             <li class="mb-2">
-                <a href="javascript:void(0)" onclick="showSection('pembayaran')"
-                    class="block w-full text-left p-2 rounded bg-blue-100">Pembayaran</a>
+                <a href="javascript:void(0)" onclick="showSection('laporan')"
+                    class="block w-full text-left p-2 rounded bg-blue-100">laporan</a>
             </li>
             <!-- User view -->
         @else

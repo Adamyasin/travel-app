@@ -9,11 +9,10 @@ return new class extends Migration {
     {
         Schema::create('pembayaran', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('pemesanan_id')->constrained('pemesanan')->onDelete('cascade');
-            $table->string('metode_pembayaran');
+            $table->foreignId('pemesanan_id')->constrained('pemesanans')->onDelete('cascade'); // Pastikan nama tabel benar!
             $table->decimal('jumlah_bayar', 10, 2);
-            $table->string('bukti_pembayaran')->nullable();
-            $table->enum('status', ['menunggu', 'dikonfirmasi', 'ditolak'])->default('menunggu');
+            $table->dateTime('tanggal_bayar');
+            $table->enum('status', ['menunggu_konfirmasi', 'sukses', 'gagal'])->default('menunggu_konfirmasi');
             $table->timestamps();
         });
     }

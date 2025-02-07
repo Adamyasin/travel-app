@@ -131,8 +131,10 @@
 
                 <!-- Image 3 with Text -->
                 <div class="transform scale-150 translate-y-11 relative">
+                    <div class="absolute inset-0 bg-black opacity-50"></div>
                     <img src="{{ asset('images/lombok.jpg') }}" alt="Lombok"
                         class="w-full h-full object-cover rounded-lg shadow-lg" loading="lazy">
+
                     <!-- Text over Image -->
                     <div
                         class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-white font-semibold text-2xl">

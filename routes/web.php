@@ -3,17 +3,8 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\DashboardController;
-
-/*
-|--------------------------------------------------------------------------
-| Web Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register web routes for your application. These
-| routes are loaded by the RouteServiceProvider within a group which
-| contains the "web" middleware group. Now create something great!
-|
-*/
+use App\Http\Controllers\Admin\JadwalTravelController;
+use App\Http\Controllers\Admin\LaporanController;
 
 Route::get('/', function () {
     return view('home');
@@ -27,4 +18,13 @@ Route::post('/logout', [AuthController::class, 'logout'])->name('logout');
 
 Route::middleware(['auth'])->group(function () {
     Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard');
+
+    Route::get('/dashboard/jadwal', [JadwalTravelController::class, 'index'])->name('dashboard.jadwal.index');
+    Route::post('/dashboard/jadwal', [JadwalTravelController::class, 'store'])->name('dashboard.jadwal.store');
+    Route::delete('/dashboard/jadwal/{id}', [JadwalTravelController::class, 'destroy'])->name('dashboard.jadwal.destroy');
+    Route::get('/dashboard/jadwal/{id}/penumpang', [JadwalTravelController::class, 'getPenumpang'])->name('dashboard.jadwal.penumpang');
+});
+
+Route::middleware(['auth'])->group(function () {
+    Route::get('/dashboard/laporan', [LaporanController::class, 'index'])->name('dashboard.laporan.index');
 });

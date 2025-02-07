@@ -14,17 +14,29 @@
         @include('layouts/sidebar')
 
         <main class="flex-1 p-6">
-            @include('admin/jadwal')
-            @include('admin/pembayaran')
+            <!-- Bagian Jadwal Travel -->
+            <section id="jadwal">
+                @include('admin.jadwal', ['jadwal' => $jadwal ?? collect()])
+            </section>
+
+            <!-- Bagian Laporan -->
+            <section id="laporan" class="hidden">
+                @include('admin.laporan')
+            </section>
         </main>
     </div>
 
     <script>
         function showSection(sectionId) {
             document.getElementById('jadwal').classList.add('hidden');
-            document.getElementById('pembayaran').classList.add('hidden');
+            document.getElementById('laporan').classList.add('hidden');
             document.getElementById(sectionId).classList.remove('hidden');
         }
+
+        // Tampilkan "jadwal" sebagai tampilan default
+        document.addEventListener("DOMContentLoaded", function() {
+            showSection('jadwal');
+        });
     </script>
 </body>
 
