@@ -44,7 +44,7 @@ class AuthController extends Controller
             'name' => $request->name,
             'email' => $request->email,
             'password' => bcrypt($request->password),
-            'role' => 'penumpang', // Set otomatis jadi 'penumpang'
+            'role' => 'penumpang',
         ]);
 
         return redirect()->route('dashboard')->with('success', 'Registrasi berhasil!');

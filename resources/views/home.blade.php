@@ -36,10 +36,9 @@
         </div>
     </nav>
 
-    <!-- Home Section -->
+    <!-- Home-->
     <section id="home" class="h-screen flex items-center justify-center bg-cover bg-center relative"
         style="background-image: url('{{ asset('images/bg-1.jpg') }}'); background-attachment: fixed; background-position: center;">
-        <!-- Overlay dengan opacity -->
         <div class="absolute inset-0 bg-black bg-opacity-30"></div>
 
         <div
@@ -55,7 +54,7 @@
 
 
 
-    <!-- About Section -->
+    <!-- About -->
     <section id="about" class="py-16 bg-gray-100 text-center">
         <div class="container mx-auto px-4">
             <h2 class="text-3xl font-semibold text-blue-600 mb-4">About Us</h2>
@@ -168,20 +167,19 @@
 
 
     <section class="py-12">
-        <!-- Konten Section bisa ditambahkan di sini -->
+        {{-- untuk space --}}
     </section>
 
 
 
-    <!-- Footer Section -->
+    {{-- Footer --}}
     <footer id="footer" class="text-white py-12 mt-16 relative"
         style="background-image: url('{{ asset('images/bg-2.jpg') }}'); background-attachment: fixed; background-position: center;">
-        <!-- Overlay Gelap -->
         <div class="absolute inset-0 bg-black opacity-50"></div>
 
         <div class="container mx-auto px-4 relative z-10">
             <div class="flex flex-col sm:flex-row justify-between items-center space-y-4 sm:space-y-0">
-                <!-- Company Info -->
+                {{-- Company Info --}}
                 <div class="text-center sm:text-left">
                     <h4 class="text-2xl font-semibold mb-2">Travel App</h4>
                     <p class="text-lg">Jelajahi dunia dengan mudah, pesan tiket perjalananmu hanya dengan beberapa
