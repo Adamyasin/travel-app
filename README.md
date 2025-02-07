@@ -7,4 +7,4 @@
 </br>
 </br>
 </br>
-<h2> Travel-app by Adamyasin </h2>
+<h2 align="center"> I'm Done, im Cooked 🍖 </h2>
