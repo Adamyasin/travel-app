@@ -2,8 +2,10 @@
 
 
 #Untuk menjalankan program, pastikan kaliann mendownload Zip atau clone apk
+</br>
 #Kemudian membuat file database di localhost kalian dengan nama db_travel
-#setelah itu jalankan di terminal "php artisan migrate"
+</br>
+#Setelah itu jalankan di terminal "php artisan migrate"
 
 <p> Terimakasih </p>
 
